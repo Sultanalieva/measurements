@@ -1,0 +1,70 @@
+unit = input('Enter the unit of length: m, cm, mm, inch: ')
+unit2 = input('Into which unit of length should be converted?: m, cm, mm, inch: ')
+value = int(input('Enter the value: '))
+
+#inch into inch, m, cm, mm
+
+if unit == 'inch' and unit2 == 'inch':
+    print('in {} {} is {} {}'.format(value,unit,value,unit2))
+
+elif unit == 'inch' and unit2 == 'm':
+    #inch to meter via multiplication to 0.0254
+    result = value * 0.0254
+   
+    
+elif unit == 'inch' and unit2 == 'cm':
+    #inch to cm 
+    result = value * 2.54
+   
+
+elif unit == 'inch' and unit2 == 'mm':
+    result = value * 25.4
+   
+
+#meters into meters,cm, mm, inch
+
+elif unit == 'm' and unit2 == 'm':
+    print('in {} {} is {} {}'.format(value,unit,value,unit2))
+
+elif unit == 'm' and unit2 == 'inch':
+    result = value *  39.3700787402
+    
+
+elif unit == 'm' and unit2 =='cm':
+    result = value * 100
+   
+
+elif unit == 'm' and unit2 =='mm':
+    result = value * 1000
+      
+    
+#centimemters to inch, m, cm, mm
+elif unit == 'cm' and unit2 == 'cm':
+    print('in {} {} is {} {}'.format(value,unit,value,unit2))
+
+elif unit == 'cm' and unit2 == 'inch':
+    result = value * 0,393701
+
+elif unit == 'cm' and unit2 == 'm':
+    result = value / 100
+    
+elif  unit == 'cm' and unit2 == 'mm':
+    result = value * 10
+
+#millimeter to inch, mm, cm, m
+    
+elif unit == 'mm' and unit2 == 'mm':
+    print('in {} {} is {} {}'.format(value,unit,value,unit2))
+
+elif unit == 'mm' and unit2 == 'm':
+    result = value / 1000
+
+elif unit == 'mm' and unit2 == 'cm':
+    result = value / 10
+
+elif unit == 'mm' and unit2 == 'inch':
+    result = value * 0.039
+    
+
+print('in {} {} is'.format(value, unit), "%.3f" %result,'{}'.format(unit2))
+    
